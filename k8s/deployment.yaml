@@ -17,4 +17,10 @@ spec:
     spec:
       containers:
         - name: pal-tracker-container
-          image: besmith/pal-tracker:v0
+          image: besmith/pal-tracker:v1
+          env:
+            - name: WELCOME_MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: pal-tracker
+                  key: welcome.message
