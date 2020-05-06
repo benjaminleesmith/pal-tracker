@@ -5,6 +5,7 @@ metadata:
   labels:
     app: pal-tracker
 spec:
+  type: ClusterIP
   selector:
     app: pal-tracker
     name: pal-tracker-pod

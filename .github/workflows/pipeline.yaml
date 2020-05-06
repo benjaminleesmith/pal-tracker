@@ -22,7 +22,7 @@ jobs:
         run: ./gradlew build
       - run: sudo apt-get install docker
       - run: docker login -u "${{env.DOCKER_HUB_USERNAME}}" -p "${{secrets.DOCKER_HUB_PASSWORD}}"
-      - run: wget https://github.com/buildpacks/pack/releases/download/v0.10.0/pack-v0.10.0-linux.tgz
+      - run: curl -LO https://github.com/buildpacks/pack/releases/download/v0.10.0/pack-v0.10.0-linux.tgz
       - run: tar xvf pack-v0.10.0-linux.tgz
       - run: rm pack-v0.10.0-linux.tgz
       - run: ls -al
