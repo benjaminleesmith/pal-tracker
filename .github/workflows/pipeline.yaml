@@ -34,7 +34,7 @@ jobs:
       - run: rm pack-v0.10.0-linux.tgz
       - run: ls -al
       - run: pwd
-      - run: ./pack build ${{env.DOCKER_HUB_USERNAME}}/pal-tracker:build-${{github.run_number}} --builder cloudfoundry/cnb:0.0.177-full-cf --publish
+      - run: ./pack build ${{env.DOCKER_HUB_USERNAME}}/pal-tracker:build-${{github.run_number}} --builder cloudfoundry/cnb:0.0.141-base --publish
   deploy:
     needs: build-pack-and-publish
     runs-on: ubuntu-latest
